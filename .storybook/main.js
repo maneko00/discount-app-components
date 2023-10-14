@@ -3,12 +3,11 @@ const spawn = require('child_process').spawn;
 const postcssPlugins = require('../config/postcss-plugins');
 
 module.exports = {
-  core: {
-    builder: 'webpack5',
-  },
   // fixes https://github.com/storybookjs/storybook/issues/15336
   typescript: {reactDocgen: false},
+
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.mjs$/,
@@ -18,11 +17,10 @@ module.exports = {
 
     config.resolve.alias = {
       ...config.resolve.alias,
-      "~": path.resolve(__dirname, "../src/"),
-      "@locales": path.resolve(__dirname, "../locales/"),
-      "locales_dynamic": path.resolve(__dirname, "../locales/"),
+      '@locales': path.resolve(__dirname, '../locales/'),
+      locales_dynamic: path.resolve(__dirname, '../locales/'),
     };
-    config.resolve.extensions.push(".ts", ".tsx");
+    config.resolve.extensions.push('.ts', '.tsx');
 
     const extraRules = [
       {
@@ -63,5 +61,13 @@ module.exports = {
     config.module.rules.push(...extraRules);
 
     return config;
+  },
+
+  docs: {
+    autodocs: false,
+  },
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
   },
 };

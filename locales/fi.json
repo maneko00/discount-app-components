@@ -144,7 +144,7 @@
     },
     "SummaryCard": {
       "title": "Yhteenveto",
-      "details": "tiedot",
+      "details": "Tiedot",
       "Header": {
         "emptyState": {
           "Code": "Ei vielä alennuskoodia.",
@@ -155,7 +155,7 @@
           "expired": "Vanhentunut",
           "scheduled": "Ajastettu"
         },
-        "typeAndMethod": "tyyppi ja menetelmä",
+        "typeAndMethod": "Tyyppi ja menetelmä",
         "discountMethod": {
           "Code": "Koodi",
           "Automatic": "Automaattinen"
@@ -189,7 +189,8 @@
           "productAndOrder": "Voidaan yhdistää tuote- ja tilausalennuksiin",
           "productAndShipping": "Voidaan yhdistää tuote- ja toimitusalennuksiin",
           "orderAndShipping": "Voidaan yhdistää tilaus- ja toimitusalennuksiin"
-        }
+        },
+        "combinesAll": "Voidaan yhdistää tuote-, tilaus- ja toimitusalennuksiin"
       },
       "CustomerEligibility": {
         "allCustomers": "Kaikki asiakkaat",
@@ -533,6 +534,49 @@
       "ZA": "Etelä-Afrikka",
       "ZM": "Sambia",
       "ZW": "Zimbabwe"
+    },
+    "ValueCard": {
+      "title": "Arvo",
+      "percentageButton": "Prosentuaalinen summa",
+      "fixedAmountButton": "Kiinteä summa",
+      "purchaseType": {
+        "title": "Ostostyyppi",
+        "choiceListTitle": "Valitse ostostyyppi",
+        "choices": {
+          "oneTime": "Kertaostos",
+          "subscription": "Tilaus",
+          "both": "Kumpaankin edellä mainittuun"
+        },
+        "warning": {
+          "product": "Tuotetarjouksia tuetaan vain kertaostoksissa.",
+          "order": "Tilaustarjouksia tuetaan vain kertaostoksissa.",
+          "shipping": "Toimitustarjouksia tuetaan vain kertaostoksissa."
+        }
+      },
+      "discountValueLabel": "Alennusarvo",
+      "oncePerOrder": "Käytä alennusta vain kerran tilausta kohti",
+      "oncePerOrderHelpText": "Jos tätä ei valita, summa vähennetään tilauksen jokaisesta hyväksyttävästä tuotteesta.",
+      "oncePerOrderHelpTextWithAmount": "Jos tätä ei valita, tilauksen jokaisesta hyväksyttävästä tuotteesta vähennetään {fixedAmountValue}."
+    },
+    "AppliesToCard": {
+      "title": "Koskee:",
+      "choiceList": {
+        "titleProducts": "Valitse tuotteet",
+        "titleCollections": "Valitse kokoelmat",
+        "products": "Tuotteet",
+        "collections": "Kokoelmat"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Alennuksen sovellusstrategiat",
+      "first": {
+        "label": "Ensimmäinen",
+        "helpText": "Sovella ensimmäistä alennusta vain sellaisilla ehdoilla, jotka täyttyvät."
+      },
+      "maximum": {
+        "label": "Enimmäistaso",
+        "helpText": "Käytä vain sellaista alennusta, joka tarjoaa suurimman alennuksen."
+      }
     }
   }
 }

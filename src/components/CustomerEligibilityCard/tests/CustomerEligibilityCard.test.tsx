@@ -2,7 +2,7 @@ import React from 'react';
 import {mockField, mountWithApp} from 'tests/utilities';
 import {Action} from '@shopify/app-bridge/actions/Navigation/Redirect';
 import {composeGid, parseGid} from '@shopify/admin-graphql-api-utilities';
-import {LegacyCard as Card, ChoiceList} from '@shopify/polaris';
+import {ChoiceList, Card, Text} from '@shopify/polaris';
 
 import {
   CustomerEligibilityCard,
@@ -10,11 +10,10 @@ import {
   SelectedCustomersList,
 } from '../CustomerEligibilityCard';
 import styles from '../CustomerEligibilityCard.scss';
-
-import {Eligibility} from '~/constants';
-import {SelectedItemsList} from '~/components/SelectedItemsList';
-import {AppBridgeLink} from '~/components/AppBridgeLink';
-import type {Customer, CustomerSegment} from '~/types';
+import {Eligibility} from '../../../constants';
+import {SelectedItemsList} from '../../SelectedItemsList';
+import {AppBridgeLink} from '../../AppBridgeLink';
+import type {Customer, CustomerSegment} from '../../../types';
 
 describe('<CustomerEligibilityCard />', () => {
   const customerSegmentsList = [
@@ -61,8 +60,9 @@ describe('<CustomerEligibilityCard />', () => {
       <CustomerEligibilityCard {...mockProps} />,
     );
 
-    expect(customerEligibilityCard).toContainReactComponent(Card, {
-      title: 'Customer eligibility',
+    expect(customerEligibilityCard).toContainReactComponent(Card);
+    expect(customerEligibilityCard).toContainReactComponent(Text, {
+      children: 'Customer eligibility',
     });
     expect(customerEligibilityCard).toContainReactComponent(ChoiceList, {
       title: 'Customer eligibility',

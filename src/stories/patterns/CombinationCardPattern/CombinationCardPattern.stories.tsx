@@ -24,12 +24,40 @@ export default {
   },
 };
 
-const Template = (args) => (
+interface Props {
+  discountClass: DiscountClass;
+  discountDescriptor: string;
+}
+
+const Template = (args: Props) => (
   <Provider>
     <CombinationCard {...args} />
   </Provider>
 );
 
-export const ProductDiscount = (args) => <Template discountDescriptor="My cool product discount" {...args} discountClass={DiscountClass.Product} />
-export const OrderDiscount = (args) => <Template discountDescriptor="My cool order discount" {...args} discountClass={DiscountClass.Order} />
-export const ShippingDiscount = (args) => <Template discountDescriptor="My cool shipping discount" {...args} discountClass={DiscountClass.Shipping} />
+interface TemplateProps {
+  discountDescriptor?: string;
+  discountClass?: DiscountClass;
+}
+
+export const ProductDiscount = (args: TemplateProps) => (
+  <Template
+    discountDescriptor="My cool product discount"
+    {...args}
+    discountClass={DiscountClass.Product}
+  />
+);
+export const OrderDiscount = (args: TemplateProps) => (
+  <Template
+    discountDescriptor="My cool order discount"
+    {...args}
+    discountClass={DiscountClass.Order}
+  />
+);
+export const ShippingDiscount = (args: TemplateProps) => (
+  <Template
+    discountDescriptor="My cool shipping discount"
+    {...args}
+    discountClass={DiscountClass.Shipping}
+  />
+);

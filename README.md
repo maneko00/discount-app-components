@@ -74,6 +74,7 @@ yarn add @shopify/discount-app-components
       return (
         <AppBridgeProvider config={/* pass your app bridge config here */}>
           <PolarisAppProvider i18n={enPolarisTranslations}>
+            {/* discount-app-component specific AppProvider */}
             <AppProvider locale="en-US" ianaTimezone="America/Los_Angeles">
               <Page title="Example app">
                 {/* Add your discount components here */}
@@ -84,6 +85,23 @@ yarn add @shopify/discount-app-components
       );
     }
     ```
+
+_**Note**: you may need to rename the discounts AppProvider to avoid clashing with another AppProvider component:_
+
+```js
+import {AppProvider as DiscountAppComponentsProvider} from '@shopify/discount-app-components';
+```
+
+_And in your app root:_
+
+```js
+<DiscountAppComponentsProvider
+  locale="en-US"
+  ianaTimezone="America/Los_Angeles"
+>
+  <Page title="Example app">{/* Add your discount components here */}</Page>
+</DiscountAppComponentsProvider>
+```
 
 ---
 
@@ -163,3 +181,7 @@ Writing changelogs and releasing should be as seamless and automated as possible
 2. It runs `yarn version` and incorporates the changesets into the changelog and bumps the version accordingly. (patch/minor/major) It then creates a `Version Packages` pull request.
 3. Merge the Version Packages PR.
 4. The release action runs `yarn release`, which publishes the package to npm.
+
+### Contributing
+
+Please see our [contributing guidelines](https://github.com/Shopify/discount-app-components/blob/main/CONTRIBUTING.md) for details.

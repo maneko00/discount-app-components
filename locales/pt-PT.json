@@ -148,7 +148,7 @@
     },
     "SummaryCard": {
       "title": "Resumo",
-      "details": "detalhes",
+      "details": "Detalhes",
       "Header": {
         "emptyState": {
           "Code": "Ainda sem código de desconto.",
@@ -159,7 +159,7 @@
           "expired": "Expirado",
           "scheduled": "Agendado"
         },
-        "typeAndMethod": "tipo e método",
+        "typeAndMethod": "Tipo e método",
         "discountMethod": {
           "Code": "Código",
           "Automatic": "Automático"
@@ -193,7 +193,8 @@
           "productAndOrder": "Combina com descontos de produto e de encomenda",
           "productAndShipping": "Combina com descontos de produto e de envio",
           "orderAndShipping": "Combina com descontos de encomenda e de envio"
-        }
+        },
+        "combinesAll": "Combina com descontos de produto, de encomenda e envio"
       },
       "CustomerEligibility": {
         "allCustomers": "Todos os clientes",
@@ -543,6 +544,49 @@
       "ZA": "África do Sul",
       "ZM": "Zâmbia",
       "ZW": "Zimbabué"
+    },
+    "ValueCard": {
+      "title": "Valor",
+      "percentageButton": "Percentagem",
+      "fixedAmountButton": "Valor fixo",
+      "purchaseType": {
+        "title": "Tipo de compra",
+        "choiceListTitle": "Selecionar tipo de compra",
+        "choices": {
+          "oneTime": "Compra única",
+          "subscription": "Subscrição",
+          "both": "Ambos"
+        },
+        "warning": {
+          "product": "Os descontos de produtos só são compatíveis com compras únicas.",
+          "order": "Os descontos de encomendas só são compatíveis com compras únicas.",
+          "shipping": "Os descontos de envio só são compatíveis com compras únicas."
+        }
+      },
+      "discountValueLabel": "Valor do desconto",
+      "oncePerOrder": "Aplicar o desconto apenas uma vez por encomenda",
+      "oncePerOrderHelpText": "Se não estiver selecionado, o valor será deduzido de cada item elegível de uma encomenda.",
+      "oncePerOrderHelpTextWithAmount": "Se não estiver selecionado, serão deduzidos {fixedAmountValue} de cada item elegível de uma encomenda."
+    },
+    "AppliesToCard": {
+      "title": "Aplica-se a",
+      "choiceList": {
+        "titleProducts": "Selecionar produtos",
+        "titleCollections": "Selecionar coleções",
+        "products": "Produtos",
+        "collections": "Coleções"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Estratégia de aplicação de descontos",
+      "first": {
+        "label": "Primeiro",
+        "helpText": "Aplicar apenas o primeiro desconto com condições cumpridas."
+      },
+      "maximum": {
+        "label": "Máximo",
+        "helpText": "Aplicar apenas o desconto que oferece a máxima redução."
+      }
     }
   }
 }

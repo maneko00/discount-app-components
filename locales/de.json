@@ -189,7 +189,8 @@
           "productAndOrder": "Mit Produkt- und Bestellungsrabatten kombinierbar",
           "productAndShipping": "Mit Produkt- und Versandrabatten kombinierbar",
           "orderAndShipping": "Mit Bestellungs- und Versandrabatten kombinierbar"
-        }
+        },
+        "combinesAll": "Mit Produkt-, Bestellungs- und Versandrabatten kombinierbar"
       },
       "CustomerEligibility": {
         "allCustomers": "Alle Kunden",
@@ -533,6 +534,49 @@
       "ZA": "Südafrika",
       "ZM": "Sambia",
       "ZW": "Simbabwe"
+    },
+    "ValueCard": {
+      "title": "Wert",
+      "percentageButton": "Prozentsatz",
+      "fixedAmountButton": "Fester Betrag",
+      "purchaseType": {
+        "title": "Art des Einkaufs",
+        "choiceListTitle": "Art des Einkaufs auswählen",
+        "choices": {
+          "oneTime": "Einmaliger Kauf",
+          "subscription": "Abonnement",
+          "both": "Beides"
+        },
+        "warning": {
+          "product": "Produktrabatte werden nur für einmalige Käufe unterstützt.",
+          "order": "Bestellrabatte werden nur für einmalige Käufe unterstützt.",
+          "shipping": "Versandrabatte werden nur für einmalige Käufe unterstützt."
+        }
+      },
+      "discountValueLabel": "Rabattwert",
+      "oncePerOrder": "Rabattcode nur einmal pro Bestellung anwenden",
+      "oncePerOrderHelpText": "Sollte diese Option nicht ausgewählt sein, wird der Betrag von jedem berechtigten Artikel in einer Bestellung abgezogen.",
+      "oncePerOrderHelpTextWithAmount": "Sollte diese Option nicht ausgewählt sein, werden {fixedAmountValue} von jedem berechtigten Artikel in einer Bestellung abgezogen."
+    },
+    "AppliesToCard": {
+      "title": "Gilt für",
+      "choiceList": {
+        "titleProducts": "Produkte auswählen",
+        "titleCollections": "Kollektionen auswählen",
+        "products": "Produkte",
+        "collections": "Kollektionen"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Strategie zur Rabatt-Anwendung",
+      "first": {
+        "label": "Erster",
+        "helpText": "Nur den ersten Rabatt anwenden, dessen Bedingungen erfüllt werden."
+      },
+      "maximum": {
+        "label": "Maximal",
+        "helpText": "Nur den Rabatt verwenden, bei dem am meisten gespart wird."
+      }
     }
   }
 }

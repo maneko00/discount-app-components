@@ -1,5 +1,43 @@
 # @shopify/discount-app-components
 
+## 1.5.0
+
+### Minor Changes
+
+- [#148](https://github.com/Shopify/discount-app-components/pull/148) [`a516750`](https://github.com/Shopify/discount-app-components/commit/a516750a5024287509f18ba6c9763c264e776b4d) Thanks [@devisscher](https://github.com/devisscher)! - Polaris peer dependencies are now all on version 11
+
+## 1.4.0
+
+### Minor Changes
+
+- [#145](https://github.com/Shopify/discount-app-components/pull/145) [`b498459`](https://github.com/Shopify/discount-app-components/commit/b498459e1fc97547e2275d44d7e27d344b2119b2) Thanks [@devisscher](https://github.com/devisscher)! - return to Polaris 11
+
+### Patch Changes
+
+- [#135](https://github.com/Shopify/discount-app-components/pull/135) [`627ef9f`](https://github.com/Shopify/discount-app-components/commit/627ef9f3462cf102d1f694889681cd440ad8d61e) Thanks [@bkspace](https://github.com/bkspace)! - Updates the spacing between in the MethodCard whilst in edit mode
+
+## 1.3.0
+
+### Minor Changes
+
+- [#93](https://github.com/Shopify/discount-app-components/pull/93) [`9e0928e`](https://github.com/Shopify/discount-app-components/commit/9e0928e0955706eba0b0d64876f03dbfada39d45) Thanks [@devisscher](https://github.com/devisscher)! - Polaris uplift
+
+- [#117](https://github.com/Shopify/discount-app-components/pull/117) [`bdbf292`](https://github.com/Shopify/discount-app-components/commit/bdbf2921f14cd8e0db16255114359b7d7abedd46) Thanks [@mathiusj](https://github.com/mathiusj)! - Add ValueCard component
+
+- [#105](https://github.com/Shopify/discount-app-components/pull/105) [`c870ef0`](https://github.com/Shopify/discount-app-components/commit/c870ef00863a40f526b3696b9f51dc57491788f6) Thanks [@wisniewski94](https://github.com/wisniewski94)! - Upgrade ActiveDates component to use Alpha Card
+
+### Patch Changes
+
+- [#118](https://github.com/Shopify/discount-app-components/pull/118) [`dc6ef60`](https://github.com/Shopify/discount-app-components/commit/dc6ef6091314122051841f19bf78b9f37785be6b) Thanks [@mathiusj](https://github.com/mathiusj)! - Enabled typescript for stories
+
+- [#124](https://github.com/Shopify/discount-app-components/pull/124) [`5fab90e`](https://github.com/Shopify/discount-app-components/commit/5fab90efd2f48f41175b98fcde14b776048f283b) Thanks [@devisscher](https://github.com/devisscher)! - use relative paths instead of aliases
+
+- [#119](https://github.com/Shopify/discount-app-components/pull/119) [`93e1144`](https://github.com/Shopify/discount-app-components/commit/93e11447aa1c42dbdfa734309292543dba0c8c25) Thanks [@mathiusj](https://github.com/mathiusj)! - moves pull request template
+
+- [#90](https://github.com/Shopify/discount-app-components/pull/90) [`8d41bb8`](https://github.com/Shopify/discount-app-components/commit/8d41bb8a2436e0920c2f4ab2cb741b340219f48c) Thanks [@bkspace](https://github.com/bkspace)! - Add support for discount stacking in Summary Card.
+
+- [#116](https://github.com/Shopify/discount-app-components/pull/116) [`96f84c8`](https://github.com/Shopify/discount-app-components/commit/96f84c83112865d200ef58e23ba8298901f199ff) Thanks [@devisscher](https://github.com/devisscher)! - Upgrade CombinationCard, HelpText, CountriesAndRatesCard, CurrencyField, CustomerEligibilityCard, MethodCard, MinimumRequirementsCard, PurchaseTypeCard, Header, Performance, UsageLimitsCard, RecuringPayment, SummaryCard to use Alpha components
+
 ## 1.2.0
 
 ### Minor Changes

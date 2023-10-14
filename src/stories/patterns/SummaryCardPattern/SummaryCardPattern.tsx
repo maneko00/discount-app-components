@@ -24,7 +24,6 @@ export default function SummaryCardPattern() {
           discountStatus: DiscountStatus.Active,
         }}
         performance={{
-          isEditing: true,
           status: DiscountStatus.Scheduled,
           usageCount: 0,
         }}
@@ -44,7 +43,7 @@ export default function SummaryCardPattern() {
             orderDiscounts: true,
             productDiscounts: false,
             shippingDiscounts: false,
-          }
+          },
         }}
         customerEligibility={{
           eligibility: Eligibility.CustomerSegments,
@@ -61,9 +60,7 @@ export default function SummaryCardPattern() {
         }}
         selectedCountries={{
           countrySelectionType: CountrySelectionType.SelectedCountries,
-          selectedCountries: [
-            SupportedCountryCode.Ca,
-          ]
+          selectedCountries: [SupportedCountryCode.Ca],
         }}
       />
     </Page>

@@ -1,16 +1,16 @@
 import React from 'react';
 import {
-  LegacyCard as Card,
+  Card,
   ChoiceList,
   Text,
   TextField,
+  HorizontalStack,
 } from '@shopify/polaris';
 import {mockField, mountWithApp} from 'tests/utilities';
 
 import {MethodCard} from '../MethodCard';
 import {DiscountCodeGenerator} from '../../DiscountCodeGenerator';
-
-import {DiscountClass, DiscountMethod} from '~/constants';
+import {DiscountClass, DiscountMethod} from '../../../constants';
 
 describe('<MethodCard />', () => {
   const mockProps = {
@@ -43,6 +43,19 @@ describe('<MethodCard />', () => {
     });
     expect(methodCard).not.toContainReactComponent(TextField, {
       label: 'Title',
+    });
+  });
+
+  it('renders the title align start and blockAlign center', () => {
+    const methodCard = mountWithApp(<MethodCard {...mockProps} />);
+
+    expect(methodCard).toContainReactComponent(Card, {
+      padding: '4',
+    });
+    expect(methodCard).toContainReactComponent(HorizontalStack, {
+      align: 'start',
+      blockAlign: 'center',
+      gap: '1',
     });
   });
 
@@ -102,8 +115,8 @@ describe('<MethodCard />', () => {
       />,
     );
     expect(methodCard).not.toContainReactComponent(ChoiceList);
-    expect(methodCard).not.toContainReactComponent(Card.Section, {
-      title: 'Method',
+    expect(methodCard).not.toContainReactComponent(Text, {
+      children: 'Method',
     });
   });
 
@@ -118,9 +131,7 @@ describe('<MethodCard />', () => {
       />,
     );
     expect(methodCard).toContainReactComponent(ChoiceList);
-    expect(methodCard).toContainReactComponent(Card.Section, {
-      title: 'Method',
-    });
+    expect(methodCard).toContainReactComponent(Card);
   });
 
   it('toggling the discount method calls onChange for the discountMethod', () => {

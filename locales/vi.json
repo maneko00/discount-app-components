@@ -144,7 +144,7 @@
     },
     "SummaryCard": {
       "title": "Tóm tắt",
-      "details": "chi tiết",
+      "details": "Chi tiết",
       "Header": {
         "emptyState": {
           "Code": "Chưa có mã giảm giá nào.",
@@ -155,7 +155,7 @@
           "expired": "Đã hết hạn",
           "scheduled": "Đã lên lịch"
         },
-        "typeAndMethod": "loại và phương pháp",
+        "typeAndMethod": "Loại và phương thức",
         "discountMethod": {
           "Code": "Mã",
           "Automatic": "Tự động"
@@ -189,7 +189,8 @@
           "productAndOrder": "Kết hợp với ưu đãi giảm giá sản phẩm và đơn hàng",
           "productAndShipping": "Kết hợp với ưu đãi giảm giá sản phẩm và vận chuyển",
           "orderAndShipping": "Kết hợp với ưu đãi giảm giá đơn hàng và vận chuyển"
-        }
+        },
+        "combinesAll": "Kết hợp với ưu đãi giảm giá sản phẩm, đơn hàng và vận chuyển"
       },
       "CustomerEligibility": {
         "allCustomers": "Tất cả khách hàng",
@@ -533,6 +534,49 @@
       "ZA": "Nam Phi",
       "ZM": "Zambia",
       "ZW": "Zimbabwe"
+    },
+    "ValueCard": {
+      "title": "Giá trị",
+      "percentageButton": "Phần trăm",
+      "fixedAmountButton": "Số tiền cố định",
+      "purchaseType": {
+        "title": "Loại đơn mua",
+        "choiceListTitle": "Chọn loại đơn mua",
+        "choices": {
+          "oneTime": "Đơn mua một lần",
+          "subscription": "Gói đăng ký",
+          "both": "Cả hai"
+        },
+        "warning": {
+          "product": "Ưu đãi giảm giá sản phẩm chỉ được hỗ trợ với đơn mua một lần.",
+          "order": "Ưu đãi giảm giá đơn hàng chỉ được hỗ trợ với đơn mua một lần.",
+          "shipping": "Ưu đãi giảm giá vận chuyển chỉ được hỗ trợ với đơn mua một lần."
+        }
+      },
+      "discountValueLabel": "Giá trị giảm giá",
+      "oncePerOrder": "Chỉ áp dụng ưu đãi giảm giá một lần mỗi đơn hàng",
+      "oncePerOrderHelpText": "Nếu không được chọn, số lượng sẽ bị loại bỏ khỏi các mặt hàng đủ điều kiện trong đơn hàng.",
+      "oncePerOrderHelpTextWithAmount": "Nếu không được chọn, {fixedAmountValue} sẽ bị loại bỏ khỏi các mặt hàng đủ điều kiện trong đơn hàng."
+    },
+    "AppliesToCard": {
+      "title": "Áp dụng cho",
+      "choiceList": {
+        "titleProducts": "Chọn sản phẩm",
+        "titleCollections": "Chọn bộ sưu tập",
+        "products": "Sản phẩm",
+        "collections": "Bộ sưu tập"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Chiến lược áp dụng ưu đãi giảm giá",
+      "first": {
+        "label": "Thứ nhất",
+        "helpText": "Chỉ áp dụng ưu đãi giảm giá đầu tiên khi đã thỏa mãn các điều kiện."
+      },
+      "maximum": {
+        "label": "Tối đa",
+        "helpText": "Chỉ áp dụng ưu đãi giảm giá có mức khấu trừ tối đa."
+      }
     }
   }
 }

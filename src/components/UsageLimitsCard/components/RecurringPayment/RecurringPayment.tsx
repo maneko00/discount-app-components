@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   ChoiceList,
-  LegacyStack as Stack,
   TextField,
   Text,
   InlineError,
@@ -9,11 +8,11 @@ import {
 } from '@shopify/polaris';
 import {useI18n} from '@shopify/react-i18n';
 
-import styles from './RecurringPayment.scss';
+import {RecurringPaymentType} from '../../../../constants';
+import type {Field, PositiveNumericString} from '../../../../types';
+import {forcePositiveInteger} from '../../../../utilities/numbers';
 
-import {RecurringPaymentType} from '~/constants';
-import type {Field, PositiveNumericString} from '~/types';
-import {forcePositiveInteger} from '~/utilities/numbers';
+import styles from './RecurringPayment.scss';
 
 const RECURRING_PAYMENT_FIELD_ID = 'RECURRING_PAYMENT_FIELD_ID';
 
@@ -49,7 +48,7 @@ export function RecurringPayment({
       renderChildren: (isSelected: boolean) => {
         return (
           isSelected && (
-            <Stack vertical spacing="extraTight">
+            <VerticalStack gap="4">
               <div className={styles.RecurringPaymentTextField}>
                 <TextField
                   id={RECURRING_PAYMENT_FIELD_ID}
@@ -79,7 +78,7 @@ export function RecurringPayment({
                   message={recurringPaymentLimit.error}
                 />
               )}
-            </Stack>
+            </VerticalStack>
           )
         );
       },
@@ -93,7 +92,7 @@ export function RecurringPayment({
   ];
 
   return (
-    <VerticalStack>
+    <VerticalStack gap="4">
       <Text variant="headingXs" as="h3">
         {i18n.translate('DiscountAppComponents.RecurringPayment.title')}
       </Text>

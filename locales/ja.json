@@ -189,7 +189,8 @@
           "productAndOrder": "商品および注文のディスカウントとの組み合わせ",
           "productAndShipping": "商品および配送のディスカウントとの組み合わせ",
           "orderAndShipping": "注文および配送のディスカウントとの組み合わせ"
-        }
+        },
+        "combinesAll": "商品、注文、配送のディスカウントの組み合わせ"
       },
       "CustomerEligibility": {
         "allCustomers": "すべてのお客様",
@@ -533,6 +534,49 @@
       "ZA": "南アフリカ",
       "ZM": "ザンビア",
       "ZW": "ジンバブエ"
+    },
+    "ValueCard": {
+      "title": "価格",
+      "percentageButton": "割引",
+      "fixedAmountButton": "定額",
+      "purchaseType": {
+        "title": "購入タイプ",
+        "choiceListTitle": "購入タイプを選択する",
+        "choices": {
+          "oneTime": "一度限りの購入",
+          "subscription": "サブスクリプション",
+          "both": "両方"
+        },
+        "warning": {
+          "product": "商品のディスカウントは、一度限りの購入にのみ適用されます。",
+          "order": "注文のディスカウントは、一度限りの購入にのみ適用されます。",
+          "shipping": "配送のディスカウントは、一度限りの購入にのみ適用されます。"
+        }
+      },
+      "discountValueLabel": "ディスカウント価格",
+      "oncePerOrder": "注文ごとにディスカウントを1回のみ適用する",
+      "oncePerOrderHelpText": "選択されていない場合、金額は注文内の各対象アイテムから差し引かれます。",
+      "oncePerOrderHelpTextWithAmount": "選択されていない場合、{fixedAmountValue}は注文内の各対象アイテムから差し引かれます。"
+    },
+    "AppliesToCard": {
+      "title": "適用対象",
+      "choiceList": {
+        "titleProducts": "商品を選択する",
+        "titleCollections": "コレクションを選択する",
+        "products": "商品",
+        "collections": "コレクション"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "ディスカウントアプリケーションの戦略",
+      "first": {
+        "label": "最初",
+        "helpText": "条件を満たした最初のディスカウントのみを適用します。"
+      },
+      "maximum": {
+        "label": "最大",
+        "helpText": "最大のディスカウントを提供するディスカウントのみを適用します。"
+      }
     }
   }
 }

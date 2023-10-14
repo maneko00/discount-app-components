@@ -144,7 +144,7 @@
     },
     "SummaryCard": {
       "title": "Sammanfattning",
-      "details": "detaljer",
+      "details": "Uppgifter",
       "Header": {
         "emptyState": {
           "Code": "Ännu ingen rabattkod.",
@@ -155,7 +155,7 @@
           "expired": "Har utgått",
           "scheduled": "Schemalagd"
         },
-        "typeAndMethod": "typ och metod",
+        "typeAndMethod": "Typ och metod",
         "discountMethod": {
           "Code": "Kod",
           "Automatic": "Automatisk"
@@ -189,7 +189,8 @@
           "productAndOrder": "Kombineras med produkt- och orderrabatter",
           "productAndShipping": "Kombineras med produkt- och leveransrabatter",
           "orderAndShipping": "Kombineras med order- och leveransrabatter"
-        }
+        },
+        "combinesAll": "Kan kombineras med produkt-, order- och leveransrabatter"
       },
       "CustomerEligibility": {
         "allCustomers": "Alla kunder",
@@ -533,6 +534,49 @@
       "ZA": "Sydafrika",
       "ZM": "Zambia",
       "ZW": "Zimbabwe"
+    },
+    "ValueCard": {
+      "title": "Värde",
+      "percentageButton": "Procentsats",
+      "fixedAmountButton": "Fast belopp",
+      "purchaseType": {
+        "title": "Inköpstyp",
+        "choiceListTitle": "Välj inköpstyp",
+        "choices": {
+          "oneTime": "Engångsköp",
+          "subscription": "Prenumeration",
+          "both": "Både och"
+        },
+        "warning": {
+          "product": "Produktrabatter stöds endast av engångsköp.",
+          "order": "Orderrabatter stöds endast av engångsköp.",
+          "shipping": "Leveransrabatter stöds endast av engångsköp."
+        }
+      },
+      "discountValueLabel": "Rabattvärde",
+      "oncePerOrder": "Använd endast en rabatt en gång per order",
+      "oncePerOrderHelpText": "Om den inte väljs kommer beloppet att dras av för varje behörig artikel i en order.",
+      "oncePerOrderHelpTextWithAmount": "Om den inte väljs kommer {fixedAmountValue} att dras av för varje behörig artikel i en order."
+    },
+    "AppliesToCard": {
+      "title": "Gäller för",
+      "choiceList": {
+        "titleProducts": "Välj produkter",
+        "titleCollections": "Välj produktserier",
+        "products": "Produkter",
+        "collections": "Produktserier"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Rabattillämpningsstrategi",
+      "first": {
+        "label": "Första",
+        "helpText": "Tillämpa bara den första rabatten vars villkor är uppfyllda."
+      },
+      "maximum": {
+        "label": "Maximum",
+        "helpText": "Tillämpa bara den rabatt som erbjuder störst avdrag."
+      }
     }
   }
 }

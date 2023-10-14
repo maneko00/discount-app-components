@@ -2,8 +2,8 @@ import React from 'react';
 import {List} from '@shopify/polaris';
 import {I18n, useI18n} from '@shopify/react-i18n';
 
-import {DiscountClass} from '~/constants';
-import type {CombinableDiscountTypes} from '~/types';
+import {DiscountClass} from '../../../../constants';
+import type {CombinableDiscountTypes} from '../../../../types';
 
 export interface CombinationsProps {
   /**
@@ -42,6 +42,8 @@ function getContent(combinations: DiscountClass[], i18n: I18n) {
         )}`,
         I18N_SCOPE,
       );
+    case 3:
+      return i18n.translate(`combinesAll`, I18N_SCOPE);
     default:
       return '';
   }

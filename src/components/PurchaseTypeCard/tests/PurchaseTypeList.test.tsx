@@ -1,10 +1,9 @@
 import React from 'react';
-import {LegacyCard as Card, ChoiceList} from '@shopify/polaris';
+import {Card, ChoiceList, Text} from '@shopify/polaris';
 import {mountWithApp, mockField} from 'tests/utilities';
 
 import {PurchaseTypeCard} from '../PurchaseTypeCard';
-
-import {PurchaseType} from '~/constants';
+import {PurchaseType} from '../../../constants';
 
 function mountWithProps({
   purchaseType = PurchaseType.OneTimePurchase,
@@ -21,10 +20,10 @@ describe('<PurchaseTypeList />', () => {
   it('shows the card title', () => {
     const purchaseTypeCard = mountWithApp(mountWithProps());
 
-    expect(purchaseTypeCard).toContainReactComponent(Card, {
-      title: 'Purchase type',
+    expect(purchaseTypeCard).toContainReactComponent(Card);
+    expect(purchaseTypeCard).toContainReactComponent(Text, {
+      children: 'Purchase type',
     });
-
     expect(purchaseTypeCard).toContainReactComponent(ChoiceList, {
       title: 'Purchase type',
       titleHidden: true,

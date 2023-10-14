@@ -148,7 +148,7 @@
     },
     "SummaryCard": {
       "title": "Résumé",
-      "details": "détails",
+      "details": "Détails",
       "Header": {
         "emptyState": {
           "Code": "Aucun code de réduction pour l’instant.",
@@ -159,7 +159,7 @@
           "expired": "Expirée",
           "scheduled": "Programmée"
         },
-        "typeAndMethod": "type et mode",
+        "typeAndMethod": "Type et méthode",
         "discountMethod": {
           "Code": "Code",
           "Automatic": "Automatique"
@@ -193,7 +193,8 @@
           "productAndOrder": "Cumulable avec les réductions sur la commande et les produits",
           "productAndShipping": "Cumulable avec les réductions sur les produits et les frais d’expédition",
           "orderAndShipping": "Cumulable avec les réductions sur la commande et les frais d’expédition"
-        }
+        },
+        "combinesAll": "Cumulable avec les réductions sur les produits, la commande et les frais d’expédition"
       },
       "CustomerEligibility": {
         "allCustomers": "Tous les clients",
@@ -543,6 +544,49 @@
       "ZA": "Afrique du Sud",
       "ZM": "Zambie",
       "ZW": "Zimbabwe"
+    },
+    "ValueCard": {
+      "title": "Valeur",
+      "percentageButton": "Pourcentage",
+      "fixedAmountButton": "Montant fixe",
+      "purchaseType": {
+        "title": "Type d’achat",
+        "choiceListTitle": "Sélectionner le type d’achat",
+        "choices": {
+          "oneTime": "Achat unique",
+          "subscription": "Abonnement",
+          "both": "Les deux"
+        },
+        "warning": {
+          "product": "Les réductions sur les produits sont compatibles uniquement avec les achats uniques.",
+          "order": "Les réductions sur les commandes sont compatibles uniquement avec les achats uniques.",
+          "shipping": "Les réductions sur l’expédition sont compatibles uniquement avec les achats uniques."
+        }
+      },
+      "discountValueLabel": "Valeur de la réduction",
+      "oncePerOrder": "N'appliquer qu'une seule réduction par commande",
+      "oncePerOrderHelpText": "S’il n’est pas sélectionné, le montant sera déduit de chaque article éligible dans une commande.",
+      "oncePerOrderHelpTextWithAmount": "S’il n’est pas sélectionné, {fixedAmountValue} seront déduits de chaque article éligible dans une commande."
+    },
+    "AppliesToCard": {
+      "title": "S’applique à",
+      "choiceList": {
+        "titleProducts": "Sélectionner des produits",
+        "titleCollections": "Sélectionner des collections",
+        "products": "Produits",
+        "collections": "Collections"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Stratégie d’application des réductions",
+      "first": {
+        "label": "Première",
+        "helpText": "Appliquer uniquement la première réduction avec les conditions qui sont satisfaites."
+      },
+      "maximum": {
+        "label": "Maximale",
+        "helpText": "Appliquer uniquement la réduction maximale."
+      }
     }
   }
 }

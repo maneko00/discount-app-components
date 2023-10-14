@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  LegacyCard,
   ChoiceList,
   Checkbox,
   InlineError,
@@ -12,9 +11,8 @@ import {mountWithApp, mockField} from 'tests/utilities';
 
 import {CountriesAndRatesCard} from '../CountriesAndRatesCard';
 import {CountrySelectionType, SupportedCountryCode} from '../../../constants';
-
-import {CurrencyField} from '~/components/CurrencyField';
-import {SelectedItemsList} from '~/components/SelectedItemsList';
+import {CurrencyField} from '../../CurrencyField';
+import {SelectedItemsList} from '../../SelectedItemsList';
 
 describe('<CountriesAndRatesCard />', () => {
   const mockProps = {
@@ -38,8 +36,8 @@ describe('<CountriesAndRatesCard />', () => {
       <CountriesAndRatesCard {...mockProps} />,
     );
 
-    expect(countriesAndRatesCard).toContainReactComponent(LegacyCard.Header, {
-      title: 'Countries',
+    expect(countriesAndRatesCard).toContainReactComponent(Text, {
+      children: 'Countries',
     });
     expect(countriesAndRatesCard).toContainReactComponent(ChoiceList, {
       title: 'Countries and rates',

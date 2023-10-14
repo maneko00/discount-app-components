@@ -5,7 +5,11 @@ import {CountriesAndRatesCard} from '../../../components/CountriesAndRatesCard';
 
 import {useLocalizeCountry} from '../../../';
 
-import {CountrySelectionType, REST_OF_WORLD, SupportedCountryCode} from '../../../constants';
+import {
+  CountrySelectionType,
+  REST_OF_WORLD,
+  SupportedCountryCode,
+} from '../../../constants';
 import {CountryCode, Field} from '../../../types';
 import {CurrencyCode} from '@shopify/react-i18n';
 
@@ -13,7 +17,7 @@ const ALL_SHOP_COUNTRIES: CountryCode[] = [
   SupportedCountryCode.Ca,
   SupportedCountryCode.Us,
   SupportedCountryCode.De,
-  REST_OF_WORLD
+  REST_OF_WORLD,
 ];
 
 export default function CountriesAndRatesCardPattern() {
@@ -22,13 +26,17 @@ export default function CountriesAndRatesCardPattern() {
   );
   const [excludeShippingRates, setExcludeShippingRates] =
     useState<boolean>(false);
-  const [maximumShippingPrice, setMaximumShippingPrice] = useState<string>();
+  const [maximumShippingPrice, setMaximumShippingPrice] = useState<string>("");
   const [countries, setCountries] = useState<CountryCode[]>([
     ALL_SHOP_COUNTRIES[0],
     ALL_SHOP_COUNTRIES[1],
   ]);
   const selectedCountriesField = {value: countries, onChange: setCountries};
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+
+  const onBlur = () => {
+    setMaximumShippingPrice("");
+  };
 
   return (
     <Page>
@@ -41,7 +49,7 @@ export default function CountriesAndRatesCardPattern() {
         maximumShippingPrice={{
           value: maximumShippingPrice,
           onChange: setMaximumShippingPrice,
-          onBlur: setMaximumShippingPrice,
+          onBlur: onBlur,
         }}
         excludeShippingRates={{
           value: excludeShippingRates,
@@ -92,7 +100,6 @@ function CountryModal({
     toggleModal();
   };
 
-
   return (
     <Modal
       activator={<Button onClick={toggleModal}>Browse</Button>}
@@ -114,21 +121,22 @@ function CountryModal({
       <ChoiceList
         allowMultiple
         title="Select countries"
-        choices={
-          countries
-          .map((countryCode) => {
-            const country = localizeCountry(countryCode);
+        choices={countries.map((countryCode) => {
+          const country = localizeCountry(countryCode);
 
-            return ({
-              label: country.name,
-              value: country.id,
-            });
-          })}
+          return {
+            label: country.name,
+            value: country.id,
+          };
+        })}
         selected={selected.map((countryCode) => countryCode)}
         onChange={(nextValue: string[]) => {
           setSelected(
             nextValue.map(
-              (selectedCountryCode) => countries.find((countryCode) => countryCode === selectedCountryCode)!,
+              (selectedCountryCode) =>
+                countries.find(
+                  (countryCode) => countryCode === selectedCountryCode,
+                )!,
             ),
           );
         }}

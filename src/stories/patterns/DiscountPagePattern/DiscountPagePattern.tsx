@@ -9,7 +9,7 @@ import {UsageLimitsCard} from '../../../components/UsageLimitsCard';
 import {SummaryCard} from '../../../components/SummaryCard';
 
 import {
-  AppliesTo,
+  AppliesToType,
   CountrySelectionType,
   DiscountClass,
   DiscountMethod,
@@ -102,7 +102,7 @@ const getDiscountData = (isEditing: boolean) => {
  */
 const appQuery = () => {
   return {
-    title: "My custom discount type",
+    title: 'My custom discount type',
   };
 };
 
@@ -117,7 +117,7 @@ export default function DiscountPage({id = '1'}) {
 
   // Active dates
   const [startTime, setStartTime] = useState(discountData.startsAt);
-  const [endTime, setEndTime] = useState(discountData.endsAt);
+  const [endTime, setEndTime] = useState<string | null>(discountData.endsAt);
 
   // Combination card
   const [combinesWith, setCombinesWith] = useState(discountData.combinesWith);
@@ -135,8 +135,8 @@ export default function DiscountPage({id = '1'}) {
   const [requirementType, setRequirementType] = useState<RequirementType>(
     RequirementType.None,
   );
-  const [subtotal, setSubtotal] = useState<string>('');
-  const [quantity, setQuantity] = useState<string>('');
+  const [subtotal, setSubtotal] = useState<string>();
+  const [quantity, setQuantity] = useState<string>();
 
   // Usage limits card
   const [totalUsageLimit, setTotalUsageLimit] = useState<string | null>(null);
@@ -150,15 +150,7 @@ export default function DiscountPage({id = '1'}) {
     discountMethod === DiscountMethod.Automatic ? discountTitle : discountCode;
 
   return (
-    <Page
-      title="Create discount"
-      breadcrumbs={[
-        {
-          content: 'Discounts',
-          onAction: () => {},
-        },
-      ]}
-    >
+    <Page title="Create discount">
       <Layout>
         <Layout.Section>
           <MethodCard
@@ -181,7 +173,7 @@ export default function DiscountPage({id = '1'}) {
           {discountMethod === DiscountMethod.Code && (
             <>
               <MinimumRequirementsCard
-                appliesTo={AppliesTo.Products}
+                appliesTo={AppliesToType.Products}
                 currencyCode={currencyCode}
                 requirementType={{
                   value: requirementType,
@@ -255,7 +247,6 @@ export default function DiscountPage({id = '1'}) {
             }}
             performance={{
               status: discountData.status,
-              isEditing,
             }}
             activeDates={{
               startDate: startTime,

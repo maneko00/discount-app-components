@@ -1,13 +1,12 @@
 import React from 'react';
-import {Banner, LegacyCard as Card, ChoiceList} from '@shopify/polaris';
+import {Banner, Card, ChoiceList, Text} from '@shopify/polaris';
 import {mockField, mountWithApp} from 'tests/utilities';
 import {composeGid} from '@shopify/admin-graphql-api-utilities';
 
 import {CombinationCard} from '../CombinationCard';
 import {HelpText} from '../components';
 import type {CombinationCardProps} from '../CombinationCard';
-
-import {DiscountClass} from '~/constants';
+import {DiscountClass} from '../../../constants';
 
 describe('<CombinationCard />', () => {
   const mockProps: CombinationCardProps = {
@@ -77,9 +76,9 @@ describe('<CombinationCard />', () => {
   it('renders <Card />', () => {
     const combinationCard = mountWithApp(<CombinationCard {...mockProps} />);
 
-    expect(combinationCard).toContainReactComponent(Card, {
-      sectioned: true,
-      title: 'Combinations',
+    expect(combinationCard).toContainReactComponent(Card);
+    expect(combinationCard).toContainReactComponent(Text, {
+      children: 'Combinations',
     });
   });
 

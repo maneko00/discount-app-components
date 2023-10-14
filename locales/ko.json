@@ -189,7 +189,8 @@
           "productAndOrder": "제품 및 주문 할인과 결합",
           "productAndShipping": "제품 및 배송 할인과 결합",
           "orderAndShipping": "주문 및 배송 할인과 결합"
-        }
+        },
+        "combinesAll": "제품, 주문, 배송 할인과 결합"
       },
       "CustomerEligibility": {
         "allCustomers": "모든 고객",
@@ -533,6 +534,49 @@
       "ZA": "남아프리카 공화국",
       "ZM": "잠비아",
       "ZW": "짐바브웨"
+    },
+    "ValueCard": {
+      "title": "값",
+      "percentageButton": "백분율",
+      "fixedAmountButton": "고정 금액",
+      "purchaseType": {
+        "title": "구매 유형",
+        "choiceListTitle": "구매 유형 선택",
+        "choices": {
+          "oneTime": "1회성 구매",
+          "subscription": "구독",
+          "both": "모두"
+        },
+        "warning": {
+          "product": "제품 할인 제공은 1회성 구매에만 지원됩니다.",
+          "order": "주문 할인 제공은 1회성 구매에만 지원됩니다.",
+          "shipping": "배송 할인 제공은 1회성 구매에만 지원됩니다."
+        }
+      },
+      "discountValueLabel": "할인 값",
+      "oncePerOrder": "주문당 1회만 할인 적용",
+      "oncePerOrderHelpText": "선택하지 않으면 주문의 각 적격 품목에서 금액이 차감됩니다.",
+      "oncePerOrderHelpTextWithAmount": "선택하지 않으면 주문의 각 적격 품목에서 {fixedAmountValue}이(가) 차감됩니다."
+    },
+    "AppliesToCard": {
+      "title": "적용 대상",
+      "choiceList": {
+        "titleProducts": "제품 선택",
+        "titleCollections": "컬렉션 선택",
+        "products": "제품",
+        "collections": "컬렉션"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "할인 적용 전략",
+      "first": {
+        "label": "첫 번째",
+        "helpText": "조건을 만족하는 첫 번째 할인만 적용합니다."
+      },
+      "maximum": {
+        "label": "최대",
+        "helpText": "차액이 가장 큰 할인만 적용합니다."
+      }
     }
   }
 }

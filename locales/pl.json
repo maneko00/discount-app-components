@@ -152,7 +152,7 @@
     },
     "SummaryCard": {
       "title": "Podsumowanie",
-      "details": "szczegóły",
+      "details": "Szczegóły",
       "Header": {
         "emptyState": {
           "Code": "Nie ma jeszcze kodu rabatowego.",
@@ -163,7 +163,7 @@
           "expired": "Wygasłe",
           "scheduled": "Zaplanowane"
         },
-        "typeAndMethod": "typ i metoda",
+        "typeAndMethod": "Typ i metoda",
         "discountMethod": {
           "Code": "Kod",
           "Automatic": "Automatyczne"
@@ -197,7 +197,8 @@
           "productAndOrder": "Łączy się z rabatami na produkty i zamówienia",
           "productAndShipping": "Łączy się z rabatami na produkty i wysyłkę",
           "orderAndShipping": "Łączy się z rabatami na zamówienie i wysyłkę"
-        }
+        },
+        "combinesAll": "Łączy się z rabatami na produkty, zamówienia i wysyłkę"
       },
       "CustomerEligibility": {
         "allCustomers": "Wszyscy klienci",
@@ -553,6 +554,49 @@
       "ZA": "Republika Południowej Afryki",
       "ZM": "Zambia",
       "ZW": "Zimbabwe"
+    },
+    "ValueCard": {
+      "title": "Wartość",
+      "percentageButton": "Procent",
+      "fixedAmountButton": "Ustalona kwota",
+      "purchaseType": {
+        "title": "Typ zakupu",
+        "choiceListTitle": "Wybierz typ zakupu",
+        "choices": {
+          "oneTime": "Zakup jednorazowy",
+          "subscription": "Subskrypcja",
+          "both": "Obie opcje"
+        },
+        "warning": {
+          "product": "Rabaty na produkty są obsługiwane tylko w przypadku jednorazowych zakupów.",
+          "order": "Rabaty na zamówienia są obsługiwane tylko w przypadku jednorazowych zakupów.",
+          "shipping": "Rabaty na wysyłkę są obsługiwane tylko w przypadku jednorazowych zakupów."
+        }
+      },
+      "discountValueLabel": "Wartość rabatu",
+      "oncePerOrder": "Rabat należy stosować tylko raz na zamówienie",
+      "oncePerOrderHelpText": "Jeśli wybór nie zostanie dokonany, kwota zostanie odjęta od każdej kwalifikującej się pozycji w zamówieniu.",
+      "oncePerOrderHelpTextWithAmount": "Jeśli wybór nie zostanie dokonany, kwota {fixedAmountValue} zostanie odjęta od każdej kwalifikującej się pozycji w zamówieniu."
+    },
+    "AppliesToCard": {
+      "title": "Dotyczy",
+      "choiceList": {
+        "titleProducts": "Wybierz produkty",
+        "titleCollections": "Wybierz kolekcje",
+        "products": "Produkty",
+        "collections": "Kolekcje"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Strategia stosowania rabatów",
+      "first": {
+        "label": "Pierwszy",
+        "helpText": "Zastosuj pierwszy rabat tylko przy spełnieniu warunków."
+      },
+      "maximum": {
+        "label": "Maksimum",
+        "helpText": "Zastosuj tylko ten rabat, który oferuje maksymalną obniżkę."
+      }
     }
   }
 }

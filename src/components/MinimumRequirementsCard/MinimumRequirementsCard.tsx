@@ -1,21 +1,21 @@
 import React, {useEffect} from 'react';
 import {
-  LegacyCard as Card,
+  Card,
   TextField,
   ChoiceList,
   InlineError,
   Text,
-  LegacyStack as Stack,
+  VerticalStack,
+  Box,
 } from '@shopify/polaris';
 import {CurrencyCode, I18n, useI18n} from '@shopify/react-i18n';
 
 import {CurrencyField} from '../CurrencyField';
+import {forcePositiveInteger} from '../../utilities/numbers';
+import type {Field, PositiveNumericString} from '../../types';
+import {AppliesToType, DiscountMethod, RequirementType} from '../../constants';
 
 import styles from './MinimumRequirementsCard.scss';
-
-import {forcePositiveInteger} from '~/utilities/numbers';
-import type {Field, PositiveNumericString} from '~/types';
-import {AppliesTo, DiscountMethod, RequirementType} from '~/constants';
 
 export interface MinimumRequirementsCardProps {
   /**
@@ -41,7 +41,7 @@ export interface MinimumRequirementsCardProps {
   /**
    * Used to render a string describing what entity the minimum requirements apply to (collections, selected products, all products)
    */
-  appliesTo: AppliesTo;
+  appliesTo: AppliesToType;
 
   /**
    * The currency code that should be used to format the input value
@@ -120,7 +120,7 @@ export function MinimumRequirementsCard({
       renderChildren: (isSelected: boolean) => {
         return (
           isSelected && (
-            <Stack vertical spacing="extraTight">
+            <VerticalStack gap="4">
               <div className={styles.TextField}>
                 <CurrencyField
                   id={SUBTOTAL_FIELD_ID}
@@ -142,7 +142,7 @@ export function MinimumRequirementsCard({
                   message={subtotal.error}
                 />
               )}
-            </Stack>
+            </VerticalStack>
           )
         );
       },
@@ -153,7 +153,7 @@ export function MinimumRequirementsCard({
       renderChildren: (isSelected: boolean) => {
         return (
           isSelected && (
-            <Stack vertical spacing="extraTight">
+            <VerticalStack gap="4">
               <div className={styles.TextField}>
                 <TextField
                   id={QUANTITY_FIELD_ID}
@@ -176,7 +176,7 @@ export function MinimumRequirementsCard({
                   message={quantity.error}
                 />
               )}
-            </Stack>
+            </VerticalStack>
           )
         );
       },
@@ -191,41 +191,45 @@ export function MinimumRequirementsCard({
       : allMinimumRequirementChoices;
 
   return (
-    <Card
-      title={i18n.translate(
-        'DiscountAppComponents.MinimumRequirementsCard.title',
-      )}
-      sectioned
-    >
-      <ChoiceList
-        title={i18n.translate(
-          'DiscountAppComponents.MinimumRequirementsCard.title',
-        )}
-        titleHidden
-        choices={minimumRequirementChoicesToRender}
-        selected={[requirementType.value]}
-        onChange={(nextValue: RequirementType[]) =>
-          requirementType.onChange(nextValue[0])
-        }
-      />
-    </Card>
+    <Box paddingBlockEnd="4">
+      <Card padding="4">
+        <VerticalStack gap="4">
+          <Text variant="headingMd" as="h2">
+            {i18n.translate(
+              'DiscountAppComponents.MinimumRequirementsCard.title',
+            )}
+          </Text>
+          <ChoiceList
+            title={i18n.translate(
+              'DiscountAppComponents.MinimumRequirementsCard.title',
+            )}
+            titleHidden
+            choices={minimumRequirementChoicesToRender}
+            selected={[requirementType.value]}
+            onChange={(nextValue: RequirementType[]) =>
+              requirementType.onChange(nextValue[0])
+            }
+          />
+        </VerticalStack>
+      </Card>
+    </Box>
   );
 }
 
 function getFieldHelpText(
   isRecurring: boolean,
-  appliesTo: AppliesTo,
+  appliesTo: AppliesToType,
   i18n: I18n,
 ) {
   const scope = isRecurring
     ? 'DiscountAppComponents.MinimumRequirementsCard.subscriptions'
     : 'DiscountAppComponents.MinimumRequirementsCard.oneTime';
   switch (appliesTo) {
-    case AppliesTo.Order:
+    case AppliesToType.Order:
       return i18n.translate('appliesToAllProducts', {scope});
-    case AppliesTo.Products:
+    case AppliesToType.Products:
       return i18n.translate('appliesToProducts', {scope});
-    case AppliesTo.Collections:
+    case AppliesToType.Collections:
       return i18n.translate('appliesToCollections', {scope});
   }
 }

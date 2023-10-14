@@ -148,7 +148,7 @@
     },
     "SummaryCard": {
       "title": "Riepilogo",
-      "details": "dettagli",
+      "details": "Dettagli",
       "Header": {
         "emptyState": {
           "Code": "Ancora nessun codice sconto.",
@@ -159,7 +159,7 @@
           "expired": "Scaduto",
           "scheduled": "Programmato"
         },
-        "typeAndMethod": "tipo e metodo",
+        "typeAndMethod": "Tipo e metodo",
         "discountMethod": {
           "Code": "Codice",
           "Automatic": "Automatico"
@@ -193,7 +193,8 @@
           "productAndOrder": "Cumulabile con sconti su prodotti e ordini",
           "productAndShipping": "Cumulabile con sconti su prodotti e spedizioni",
           "orderAndShipping": "Cumulabile con sconti su ordini e spedizioni"
-        }
+        },
+        "combinesAll": "Cumulabile con prodotti, ordini e sconti sulla spedizione"
       },
       "CustomerEligibility": {
         "allCustomers": "Tutti i clienti",
@@ -543,6 +544,49 @@
       "ZA": "Sud Africa",
       "ZM": "Zambia",
       "ZW": "Zimbabwe"
+    },
+    "ValueCard": {
+      "title": "Value (Valore)",
+      "percentageButton": "Percentuale",
+      "fixedAmountButton": "Importo fisso",
+      "purchaseType": {
+        "title": "Tipo di acquisto",
+        "choiceListTitle": "Seleziona tipo di acquisto",
+        "choices": {
+          "oneTime": "Acquisto una tantum",
+          "subscription": "Abbonamento",
+          "both": "Entrambe"
+        },
+        "warning": {
+          "product": "Gli sconti sui prodotti sono supportati solo con gli acquisti una tantum.",
+          "order": "Gli sconti sugli ordini sono supportati solo con gli acquisti una tantum.",
+          "shipping": "Gli sconti sulle spedizioni sono supportati solo con gli acquisti una tantum."
+        }
+      },
+      "discountValueLabel": "Valore sconto",
+      "oncePerOrder": "Applica sconto solo una volta per ordine",
+      "oncePerOrderHelpText": "Se non selezionato, l'importo sarà sottratto da ogni articolo idoneo dell'ordine.",
+      "oncePerOrderHelpTextWithAmount": "Se non selezionato, sarà sottratto {fixedAmountValue} da ogni articolo idoneo dell'ordine."
+    },
+    "AppliesToCard": {
+      "title": "Si applica a",
+      "choiceList": {
+        "titleProducts": "Seleziona prodotti",
+        "titleCollections": "Seleziona collezioni",
+        "products": "Prodotti",
+        "collections": "Collezioni"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Strategia di applicazione degli sconti",
+      "first": {
+        "label": "Primo",
+        "helpText": "Applica solo il primo sconto con le condizioni soddisfatte."
+      },
+      "maximum": {
+        "label": "Massimo",
+        "helpText": "Applica solo lo sconto che offre la massima riduzione."
+      }
     }
   }
 }

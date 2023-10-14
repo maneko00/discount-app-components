@@ -26,7 +26,7 @@ export {
   DiscountClass,
   RecurringPaymentType,
   RequirementType,
-  AppliesTo,
+  AppliesToType,
   CountrySelectionType,
   DiscountStatus,
   Eligibility,
@@ -108,3 +108,8 @@ export {useLocalizeCountry} from './components/CountriesAndRatesCard/utilities';
 export {onBreadcrumbAction, handleRedirect} from './utilities/navigation';
 
 export {generateRandomDiscountCode} from './components/DiscountCodeGenerator/utilities';
+export {ValueCard} from './components/ValueCard';
+
+export {DiscountApplicationStrategyCard} from './components/DiscountApplicationStrategyCard';
+
+export {AppliesTo} from './components/AppliesTo';

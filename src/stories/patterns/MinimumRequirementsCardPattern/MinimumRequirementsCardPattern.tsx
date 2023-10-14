@@ -2,7 +2,12 @@ import React, {useState} from 'react';
 
 import {Page} from '@shopify/polaris';
 import {MinimumRequirementsCard} from '../../../../src';
-import {AppliesTo, DiscountClass, DiscountMethod, RequirementType} from '../../../constants';
+import {
+  AppliesToType,
+  DiscountClass,
+  DiscountMethod,
+  RequirementType,
+} from '../../../constants';
 import {CurrencyCode} from '@shopify/react-i18n';
 import {MethodCard} from '../../../components/MethodCard';
 
@@ -10,8 +15,8 @@ export default function MinimumRequirementsCardPattern() {
   const [requirementType, setRequirementType] = useState<RequirementType>(
     RequirementType.None,
   );
-  const [subtotal, setSubtotal] = useState<string>('');
-  const [quantity, setQuantity] = useState<string>('');
+  const [subtotal, setSubtotal] = useState<string>();
+  const [quantity, setQuantity] = useState<string>();
 
   const [discountMethod, setDiscountMethod] = useState<DiscountMethod>(
     DiscountMethod.Code,
@@ -38,7 +43,7 @@ export default function MinimumRequirementsCardPattern() {
         }}
       />
       <MinimumRequirementsCard
-        appliesTo={AppliesTo.Products}
+        appliesTo={AppliesToType.Products}
         currencyCode={CurrencyCode.Cad}
         requirementType={{
           value: requirementType,

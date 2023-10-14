@@ -144,7 +144,7 @@
     },
     "SummaryCard": {
       "title": "Oversigt",
-      "details": "detaljer",
+      "details": "Detaljer",
       "Header": {
         "emptyState": {
           "Code": "Ingen rabatkode endnu.",
@@ -155,7 +155,7 @@
           "expired": "Udløbet",
           "scheduled": "Planlagt"
         },
-        "typeAndMethod": "type og metode",
+        "typeAndMethod": "Type og metode",
         "discountMethod": {
           "Code": "Kode",
           "Automatic": "Automatisk"
@@ -189,7 +189,8 @@
           "productAndOrder": "Kan kombineres med produkt- og ordrerabatter",
           "productAndShipping": "Kan kombineres med produkt- og leveringsrabatter",
           "orderAndShipping": "Kan kombineres med ordre- og leveringsrabatter"
-        }
+        },
+        "combinesAll": "Kan kombineres med produkt-, ordre- og leveringsrabatter"
       },
       "CustomerEligibility": {
         "allCustomers": "Alle kunder",
@@ -533,6 +534,49 @@
       "ZA": "Sydafrika",
       "ZM": "Zambia",
       "ZW": "Zimbabwe"
+    },
+    "ValueCard": {
+      "title": "Værdi",
+      "percentageButton": "Procent",
+      "fixedAmountButton": "Fast beløb",
+      "purchaseType": {
+        "title": "Købstype",
+        "choiceListTitle": "Vælg købstype",
+        "choices": {
+          "oneTime": "Engangskøb",
+          "subscription": "Abonnement",
+          "both": "Begge"
+        },
+        "warning": {
+          "product": "Produktrabatter understøttes kun med engangskøb.",
+          "order": "Ordrerabatter understøttes kun med engangskøb.",
+          "shipping": "Leveringsrabatter understøttes kun med engangskøb."
+        }
+      },
+      "discountValueLabel": "Rabatværdi",
+      "oncePerOrder": "Rabatten gælder kun én gang pr. ordre",
+      "oncePerOrderHelpText": "Hvis den ikke vælges, trækkes beløbet fra hver kvalificeret vare i en ordre.",
+      "oncePerOrderHelpTextWithAmount": "Hvis den ikke vælges, trækkes {fixedAmountValue} fra hver kvalificeret vare i en ordre."
+    },
+    "AppliesToCard": {
+      "title": "Gælder for",
+      "choiceList": {
+        "titleProducts": "Vælg produkter",
+        "titleCollections": "Vælg kollektioner",
+        "products": "Produkter",
+        "collections": "Kollektioner"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "Strategi for rabattildeling",
+      "first": {
+        "label": "Første",
+        "helpText": "Anvend kun den første rabat, hvor betingelserne er opfyldt."
+      },
+      "maximum": {
+        "label": "Maksimum",
+        "helpText": "Anvend kun den rabat, der giver den maksimale prisnedsættelse."
+      }
     }
   }
 }

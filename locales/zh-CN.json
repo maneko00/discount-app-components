@@ -139,12 +139,12 @@
       "warning": {
         "title": "某些组合可使折扣优惠金额更大",
         "description": "测试一些组合。如果折扣总数太大，请调整可以组合的折扣。",
-        "link": "了解详细信息"
+        "link": "详细了解"
       }
     },
     "SummaryCard": {
       "title": "摘要",
-      "details": "详情",
+      "details": "详细信息",
       "Header": {
         "emptyState": {
           "Code": "尚无折扣码。",
@@ -189,7 +189,8 @@
           "productAndOrder": "与产品和订单折扣组合",
           "productAndShipping": "与产品和运费折扣组合",
           "orderAndShipping": "与订单和运费折扣组合"
-        }
+        },
+        "combinesAll": "与产品、订单和运费折扣进行组合"
       },
       "CustomerEligibility": {
         "allCustomers": "全部客户",
@@ -533,6 +534,49 @@
       "ZA": "南非",
       "ZM": "赞比亚",
       "ZW": "津巴布韦"
+    },
+    "ValueCard": {
+      "title": "值",
+      "percentageButton": "百分比",
+      "fixedAmountButton": "固定金额",
+      "purchaseType": {
+        "title": "购买类型",
+        "choiceListTitle": "选择购买类型",
+        "choices": {
+          "oneTime": "一次性购买",
+          "subscription": "订阅",
+          "both": "两者都是"
+        },
+        "warning": {
+          "product": "只有一次性购买支持产品折扣。",
+          "order": "只有一次性购买支持订单折扣。",
+          "shipping": "只有一次性购买支持运费折扣。"
+        }
+      },
+      "discountValueLabel": "折扣额",
+      "oncePerOrder": "每个订单仅使用一次折扣",
+      "oncePerOrderHelpText": "如果未选择，订单中每件符合条件的商品都将减去此金额。",
+      "oncePerOrderHelpTextWithAmount": "如果未选择，订单中每件符合条件的商品都将减去 {fixedAmountValue}。"
+    },
+    "AppliesToCard": {
+      "title": "适用于",
+      "choiceList": {
+        "titleProducts": "选择产品",
+        "titleCollections": "选择产品系列",
+        "products": "产品",
+        "collections": "产品系列"
+      }
+    },
+    "DiscountApplicationStrategyCard": {
+      "title": "折扣应用策略",
+      "first": {
+        "label": "第一个",
+        "helpText": "仅应用满足条件的第一个折扣。"
+      },
+      "maximum": {
+        "label": "最大降幅",
+        "helpText": "仅应用提供最大金额降幅的折扣。"
+      }
     }
   }
 }
