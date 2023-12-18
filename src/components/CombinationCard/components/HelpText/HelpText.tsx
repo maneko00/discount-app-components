@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {Button, Text, Link, VerticalStack} from '@shopify/polaris';
+import {Button, Text, Link, BlockStack} from '@shopify/polaris';
 import {useI18n} from '@shopify/react-i18n';
 import {useAppBridge} from '@shopify/app-bridge-react';
 import {Modal} from '@shopify/app-bridge/actions';
@@ -55,8 +55,8 @@ export function HelpText({
   };
 
   return count > 0 ? (
-    <VerticalStack>
-      <Text as="span" color="subdued">
+    <BlockStack>
+      <Text as="span" tone="subdued">
         {i18n.translate(
           'combinations.info',
           {scope},
@@ -64,7 +64,7 @@ export function HelpText({
             count,
             discountCountLink: (
               <span ref={buttonWrapperRef}>
-                <Button onClick={handleModalOpen} plain>
+                <Button onClick={handleModalOpen} variant="plain">
                   {i18n.translate(
                     `combinations.counts.${targetDiscountClassLabel}`,
                     {scope},
@@ -78,13 +78,13 @@ export function HelpText({
           },
         )}
       </Text>
-      <Text as="span" color="subdued">
+      <Text as="span" tone="subdued">
         {i18n.translate('combinations.multipleEligibleDiscounts', {scope})}
       </Text>
-    </VerticalStack>
+    </BlockStack>
   ) : (
     <>
-      <Text as="span" color="subdued">
+      <Text as="span" tone="subdued">
         {i18n.translate('title', {
           scope: `${scope}.emptyState.${targetDiscountClass.toLowerCase()}`,
         })}{' '}

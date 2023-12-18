@@ -1,11 +1,15 @@
 .CustomerItem {
   display: flex;
-  gap: var(--p-space-3);
+  gap: var(--p-space-300);
   align-items: center;
 }
 
 .Email {
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--p-text-subdued);
+  color: var(--p-color-text-secondary);
+}
+
+.SelectedItemsActivator {
+  margin-top: var(--p-space-200);
 }

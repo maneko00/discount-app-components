@@ -5,7 +5,7 @@ import {
   TextField,
   Text,
   InlineError,
-  VerticalStack,
+  BlockStack,
   Box,
 } from '@shopify/polaris';
 import {useI18n} from '@shopify/react-i18n';
@@ -96,9 +96,9 @@ export function UsageLimitsCard(props: UsageLimitsCardProps) {
   };
 
   return (
-    <Box paddingBlockEnd="4">
-      <Card padding="4">
-        <VerticalStack gap="4">
+    <Box paddingBlockEnd="400">
+      <Card padding="400">
+        <BlockStack gap="400">
           <Text variant="headingMd" as="h2">
             {i18n.translate('DiscountAppComponents.UsageLimitsCard.title')}
           </Text>
@@ -121,7 +121,7 @@ export function UsageLimitsCard(props: UsageLimitsCardProps) {
                 ),
                 value: UsageLimitType.TotalUsageLimit,
                 renderChildren: (isSelected: boolean) => (
-                  <VerticalStack>
+                  <BlockStack>
                     {isSelected && (
                       <div className={styles.TotalUsageLimitTextField}>
                         <TextField
@@ -143,7 +143,7 @@ export function UsageLimitsCard(props: UsageLimitsCardProps) {
                       </div>
                     )}
                     {isRecurring && (
-                      <Text as="span" color="subdued">
+                      <Text as="span" tone="subdued">
                         {i18n.translate(
                           'DiscountAppComponents.UsageLimitsCard.totalUsageLimitHelpTextSubscription',
                         )}
@@ -155,7 +155,7 @@ export function UsageLimitsCard(props: UsageLimitsCardProps) {
                         message={totalUsageLimit.error}
                       />
                     )}
-                  </VerticalStack>
+                  </BlockStack>
                 ),
               },
               {
@@ -167,14 +167,14 @@ export function UsageLimitsCard(props: UsageLimitsCardProps) {
             ]}
             onChange={handleUsageLimitsChoicesChange}
           />
-        </VerticalStack>
+        </BlockStack>
         {isShowRecurringPaymentSection(props) && (
-          <VerticalStack gap="4">
+          <BlockStack gap="400">
             <RecurringPayment
               recurringPaymentType={props.recurringPaymentType}
               recurringPaymentLimit={props.recurringPaymentLimit}
             />
-          </VerticalStack>
+          </BlockStack>
         )}
       </Card>
     </Box>

@@ -34,7 +34,7 @@ describe('<Header />', () => {
       );
 
       expect(header).toContainReactComponent(Badge, {
-        status: BadgeStatus.Success,
+        tone: BadgeStatus.Success,
         children: 'Active',
       });
     });
@@ -65,7 +65,7 @@ describe('<Header />', () => {
       );
 
       expect(header).toContainReactComponent(Badge, {
-        status: BadgeStatus.Attention,
+        tone: BadgeStatus.Attention,
         children: 'Scheduled',
       });
     });

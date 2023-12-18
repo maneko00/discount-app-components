@@ -1,7 +1,7 @@
 /* eslint-disable @shopify/typescript/prefer-pascal-case-enums */
 import React from 'react';
 import {useI18n} from '@shopify/react-i18n';
-import {List, Card, VerticalStack, Text, Box} from '@shopify/polaris';
+import {List, Card, BlockStack, Text, Box} from '@shopify/polaris';
 
 import {
   ActiveDates,
@@ -115,19 +115,19 @@ export function SummaryCard(props: SummaryCardProps) {
   );
 
   return (
-    <Box paddingBlockEnd="4">
-      <Card padding="4">
-        <VerticalStack gap="4">
+    <Box paddingBlockEnd="400">
+      <Card padding="400">
+        <BlockStack gap="400">
           <Text variant="headingMd" as="h2">
             {i18n.translate('title', I18N_SCOPE)}
           </Text>
 
-          <VerticalStack gap="2">
+          <BlockStack gap="200">
             <Header {...props.header} />
 
             {showDetailsSection && (
-              <VerticalStack gap="2">
-                <Text variant="headingXs" as="h3">
+              <BlockStack gap="200">
+                <Text variant="headingSm" as="h3">
                   {i18n.translate('details', I18N_SCOPE)}
                 </Text>
 
@@ -170,11 +170,11 @@ export function SummaryCard(props: SummaryCardProps) {
 
                   {props.activeDates && <ActiveDates {...props.activeDates} />}
                 </List>
-              </VerticalStack>
+              </BlockStack>
             )}
-          </VerticalStack>
+          </BlockStack>
           <Performance {...props.performance} />
-        </VerticalStack>
+        </BlockStack>
       </Card>
     </Box>
   );

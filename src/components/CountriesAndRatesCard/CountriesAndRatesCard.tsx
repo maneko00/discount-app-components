@@ -4,7 +4,7 @@ import {
   ChoiceList,
   Checkbox,
   InlineError,
-  VerticalStack,
+  BlockStack,
   Text,
   Box,
 } from '@shopify/polaris';
@@ -69,9 +69,9 @@ export function CountriesAndRatesCard({
   const localizeCountry = useLocalizeCountry();
 
   return (
-    <Box paddingBlockEnd="4">
-      <Card padding="4">
-        <VerticalStack gap="4">
+    <Box paddingBlockEnd="400">
+      <Card padding="400">
+        <BlockStack gap="400">
           <Text variant="headingMd" as="h2">
             {i18n.translate(
               'DiscountAppComponents.CountriesAndRatesCard.title',
@@ -125,7 +125,6 @@ export function CountriesAndRatesCard({
               'DiscountAppComponents.CountriesAndRatesCard.excludeShippingRatesSection.title',
             )}
           </Text>
-          {/* > */}
           <Checkbox
             label={i18n.translate(
               'DiscountAppComponents.CountriesAndRatesCard.excludeShippingRatesSection.checkboxLabel',
@@ -157,8 +156,7 @@ export function CountriesAndRatesCard({
               )}
             </>
           )}
-          {/* </Card.Section> */}
-        </VerticalStack>
+        </BlockStack>
       </Card>
     </Box>
   );

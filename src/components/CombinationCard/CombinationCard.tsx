@@ -4,7 +4,7 @@ import {
   Link,
   Card,
   ChoiceList,
-  VerticalStack,
+  BlockStack,
   Text,
   ChoiceListProps,
   Box,
@@ -80,16 +80,16 @@ export function CombinationCard({
       selectedChoices.includes(DiscountClass.Order));
 
   return (
-    <Box paddingBlockEnd="4">
-      <Card padding="4">
-        <VerticalStack gap="4">
+    <Box paddingBlockEnd="400">
+      <Card padding="400">
+        <BlockStack gap="400">
           <Text variant="headingMd" as="h2">
             {i18n.translate('title', I18N_SCOPE)}
           </Text>
           {shouldShowBanner && (
             <Banner
               title={i18n.translate('warning.title', I18N_SCOPE)}
-              status="warning"
+              tone="warning"
             >
               <p>
                 {i18n.translate('warning.description', I18N_SCOPE)}{' '}
@@ -133,7 +133,7 @@ export function CombinationCard({
             selected={getSelectedChoices(combinableDiscountTypes.value)}
             onChange={handleDiscountCombinesWithChange}
           />
-        </VerticalStack>
+        </BlockStack>
       </Card>
     </Box>
   );

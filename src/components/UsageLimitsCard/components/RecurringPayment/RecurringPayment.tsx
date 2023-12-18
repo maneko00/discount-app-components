@@ -4,7 +4,7 @@ import {
   TextField,
   Text,
   InlineError,
-  VerticalStack,
+  BlockStack,
 } from '@shopify/polaris';
 import {useI18n} from '@shopify/react-i18n';
 
@@ -48,7 +48,7 @@ export function RecurringPayment({
       renderChildren: (isSelected: boolean) => {
         return (
           isSelected && (
-            <VerticalStack gap="4">
+            <BlockStack gap="400">
               <div className={styles.RecurringPaymentTextField}>
                 <TextField
                   id={RECURRING_PAYMENT_FIELD_ID}
@@ -67,7 +67,7 @@ export function RecurringPayment({
                   error={Boolean(recurringPaymentLimit.error)}
                 />
               </div>
-              <Text as="span" color="subdued">
+              <Text as="span" tone="subdued">
                 {i18n.translate(
                   'DiscountAppComponents.RecurringPayment.includesFirstPayment',
                 )}
@@ -78,7 +78,7 @@ export function RecurringPayment({
                   message={recurringPaymentLimit.error}
                 />
               )}
-            </VerticalStack>
+            </BlockStack>
           )
         );
       },
@@ -92,8 +92,8 @@ export function RecurringPayment({
   ];
 
   return (
-    <VerticalStack gap="4">
-      <Text variant="headingXs" as="h3">
+    <BlockStack gap="400">
+      <Text variant="headingSm" as="h3">
         {i18n.translate('DiscountAppComponents.RecurringPayment.title')}
       </Text>
       <ChoiceList
@@ -107,6 +107,6 @@ export function RecurringPayment({
           )
         }
       />
-    </VerticalStack>
+    </BlockStack>
   );
 }

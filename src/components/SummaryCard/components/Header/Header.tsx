@@ -1,12 +1,6 @@
 import React from 'react';
 import {I18n, useI18n} from '@shopify/react-i18n';
-import {
-  Badge,
-  HorizontalStack,
-  List,
-  Text,
-  VerticalStack,
-} from '@shopify/polaris';
+import {Badge, InlineStack, List, Text, BlockStack} from '@shopify/polaris';
 
 import {DiscountMethod, DiscountStatus} from '../../../../constants';
 
@@ -62,23 +56,23 @@ export function Header(props: HeaderProps) {
   const trimmedDescriptor = discountDescriptor.trim();
 
   return (
-    <VerticalStack gap="4">
+    <BlockStack gap="400">
       {trimmedDescriptor ? (
-        <HorizontalStack align="space-between">
+        <InlineStack align="space-between">
           <Text variant="headingMd" as="h3">
             {trimmedDescriptor}
           </Text>
 
           {isEditing(props) && renderBadgeForStatus(props.discountStatus, i18n)}
-        </HorizontalStack>
+        </InlineStack>
       ) : (
-        <Text as="span" fontWeight="semibold" color="subdued">
+        <Text as="span" fontWeight="semibold" tone="subdued">
           {i18n.translate(`emptyState.${discountMethod}`, I18N_SCOPE)}
         </Text>
       )}
 
-      <VerticalStack gap="2">
-        <Text variant="headingXs" as="h3">
+      <BlockStack gap="200">
+        <Text variant="headingSm" as="h3">
           {i18n.translate('typeAndMethod', I18N_SCOPE)}
         </Text>
         <List type="bullet">
@@ -87,8 +81,8 @@ export function Header(props: HeaderProps) {
             {i18n.translate(`discountMethod.${discountMethod}`, I18N_SCOPE)}
           </List.Item>
         </List>
-      </VerticalStack>
-    </VerticalStack>
+      </BlockStack>
+    </BlockStack>
   );
 }
 
@@ -96,7 +90,7 @@ function renderBadgeForStatus(status: DiscountStatus, i18n: I18n) {
   switch (status) {
     case DiscountStatus.Active:
       return (
-        <Badge status={BadgeStatus.Success}>
+        <Badge tone={BadgeStatus.Success}>
           {i18n.translate('badge.active', I18N_SCOPE)}
         </Badge>
       );
@@ -104,7 +98,7 @@ function renderBadgeForStatus(status: DiscountStatus, i18n: I18n) {
       return <Badge>{i18n.translate('badge.expired', I18N_SCOPE)}</Badge>;
     case DiscountStatus.Scheduled:
       return (
-        <Badge status={BadgeStatus.Attention}>
+        <Badge tone={BadgeStatus.Attention}>
           {i18n.translate('badge.scheduled', I18N_SCOPE)}
         </Badge>
       );

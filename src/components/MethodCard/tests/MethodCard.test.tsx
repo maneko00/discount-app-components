@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Card,
-  ChoiceList,
-  Text,
-  TextField,
-  HorizontalStack,
-} from '@shopify/polaris';
+import {Card, ChoiceList, Text, TextField, InlineStack} from '@shopify/polaris';
 import {mockField, mountWithApp} from 'tests/utilities';
 
 import {MethodCard} from '../MethodCard';
@@ -50,12 +44,12 @@ describe('<MethodCard />', () => {
     const methodCard = mountWithApp(<MethodCard {...mockProps} />);
 
     expect(methodCard).toContainReactComponent(Card, {
-      padding: '4',
+      padding: '400',
     });
-    expect(methodCard).toContainReactComponent(HorizontalStack, {
+    expect(methodCard).toContainReactComponent(InlineStack, {
       align: 'start',
       blockAlign: 'center',
-      gap: '1',
+      gap: '100',
     });
   });
 

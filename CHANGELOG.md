@@ -1,5 +1,45 @@
 # @shopify/discount-app-components
 
+## 2.1.2
+
+### Patch Changes
+
+- [#188](https://github.com/Shopify/discount-app-components/pull/188) [`0e366a8`](https://github.com/Shopify/discount-app-components/commit/0e366a8f9ede089de37ec4f8fcf0a86577c4711f) Thanks [@mathiusj](https://github.com/mathiusj)! - move strategy to constants
+
+## 2.1.1
+
+### Patch Changes
+
+- [#186](https://github.com/Shopify/discount-app-components/pull/186) [`4b47938`](https://github.com/Shopify/discount-app-components/commit/4b479380fb64cc4c730b9faff3baa22dc1227789) Thanks [@mathiusj](https://github.com/mathiusj)! - export strategy type from index
+
+## 2.1.0
+
+### Minor Changes
+
+- [#178](https://github.com/Shopify/discount-app-components/pull/178) [`0d67597`](https://github.com/Shopify/discount-app-components/commit/0d67597354622bd9fd616bfc7ca93dca1c013401) Thanks [@mathiusj](https://github.com/mathiusj)! - add strategy all to DiscountApplicationStrategyCard
+
+## 2.0.0
+
+### Major Changes
+
+- [#146](https://github.com/Shopify/discount-app-components/pull/146) [`ddb0906`](https://github.com/Shopify/discount-app-components/commit/ddb0906dcca9d4c23654e192dc68e1e269195830) Thanks [@devisscher](https://github.com/devisscher)! - Upgrade to Polaris 12. See https://polaris.shopify.com/new-design-language to learn more about Polaris 12.
+
+### Minor Changes
+
+- [#154](https://github.com/Shopify/discount-app-components/pull/154) [`0d3c459`](https://github.com/Shopify/discount-app-components/commit/0d3c459082ee3484de3a92c49c8f97f1e4b88de7) Thanks [@mathiusj](https://github.com/mathiusj)! - Add DiscountApplicationStrategyCard, which allows the user to select the discount application strategy, MAXIMUM or FIRST.
+
+- [#159](https://github.com/Shopify/discount-app-components/pull/159) [`1eab1f6`](https://github.com/Shopify/discount-app-components/commit/1eab1f6fba36f6323c288c983949398d3b0f06a2) Thanks [@devisscher](https://github.com/devisscher)! - Add AppliesTo section, which allows users to select products or collections that are eligible for discounts.
+
+  Add AppliesTo section to the ValueCard.
+
+- [#161](https://github.com/Shopify/discount-app-components/pull/161) [`5e7c0c1`](https://github.com/Shopify/discount-app-components/commit/5e7c0c1ce055756c1a801a88ed4ef48e335c1a58) Thanks [@bkspace](https://github.com/bkspace)! - Update Polaris to beta-1
+
+### Patch Changes
+
+- [#150](https://github.com/Shopify/discount-app-components/pull/150) [`97f0b1a`](https://github.com/Shopify/discount-app-components/commit/97f0b1a56cfcac30072a3646eeab2a14b200cb6c) Thanks [@devisscher](https://github.com/devisscher)! - style method card title
+
+- [#129](https://github.com/Shopify/discount-app-components/pull/129) [`b4f513e`](https://github.com/Shopify/discount-app-components/commit/b4f513e2aa3d37d1f503a3e4bddc6db24d4ab932) Thanks [@bkspace](https://github.com/bkspace)! - Update spacing and capitalization in SummaryCard component
+
 ## 1.5.0
 
 ### Minor Changes

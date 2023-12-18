@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Card, ChoiceList, Text, VerticalStack} from '@shopify/polaris';
+import {Box, Card, ChoiceList, Text, BlockStack} from '@shopify/polaris';
 import {useI18n} from '@shopify/react-i18n';
 import {Action} from '@shopify/app-bridge/actions/Navigation/Redirect';
 import {parseGid} from '@shopify/admin-graphql-api-utilities';
@@ -52,9 +52,9 @@ export function CustomerEligibilityCard({
   const [i18n] = useI18n();
 
   return (
-    <Box paddingBlockEnd="4">
-      <Card padding="4">
-        <VerticalStack gap="4">
+    <Box paddingBlockEnd="400">
+      <Card padding="400">
+        <BlockStack gap="400">
           <Text variant="headingMd" as="h2">
             {i18n.translate('title', I18N_SCOPE)}
           </Text>
@@ -82,22 +82,25 @@ export function CustomerEligibilityCard({
           />
 
           {eligibility.value === Eligibility.CustomerSegments && (
-            <VerticalStack gap="4">
-              {customerSegmentSelector}
-
+            <>
+              <div className={styles.SelectedItemsActivator}>
+                {customerSegmentSelector}
+              </div>
               <SelectedCustomerSegmentsList
                 selectedCustomerSegments={selectedCustomerSegments}
               />
-            </VerticalStack>
+            </>
           )}
 
           {eligibility.value === Eligibility.Customers && (
-            <VerticalStack gap="4">
-              {customerSelector}
+            <>
+              <div className={styles.SelectedItemsActivator}>
+                {customerSelector}
+              </div>
               <SelectedCustomersList selectedCustomers={selectedCustomers} />
-            </VerticalStack>
+            </>
           )}
-        </VerticalStack>
+        </BlockStack>
       </Card>
     </Box>
   );
